@@ -69,7 +69,7 @@ int main(int argc, char *argv[]) {
     GENOME_LIST *gl = (GENOME_LIST *) calloc(1, sizeof(GENOME_LIST));
     
     //Input para a lista do ficheiro de genomas
-    read_genomes(gl, "/Users/anogueira/Desktop/Final/ProdCons/input/cds.fna");
+    read_genomes(gl, "/Users/anogueira/Desktop/SO_PL/input/cds.fna");
     
     //Variavel com total de genomas lidos
     TOTAl = (int) gl->n_genomes;
@@ -182,7 +182,7 @@ void *consumidor(void *param) {
         
         //Criação de ficheiro com resultado das comparações
         save_mutation_array((long) pthread_self(), mutation_array,
-                            "/Users/anogueira/Desktop/Final/ProdCons/output/Prod_Cons.txt",
+                            "/Users/anogueira/Desktop/SO_PL/output/Prod_Cons.txt",
                             save, 0);
         free_mutations(mutation_array);
     }
